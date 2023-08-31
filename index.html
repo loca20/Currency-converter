@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator walut</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/result.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script defer src="./js/script.js"></script>
+</head>
+
+<body class="body">
+    <header class="header">
+        <h1 class="header__title">Kalkulator walut</h1>
+    </header>
+
+    <div class="container">
+        <form class="form js-form">
+            <p><label class="form__labelText">Waluta, którą posiadasz:</label>
+                <select class="form__currency js-form__currency--in">
+                    <option selected>PLN</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                    <option>USD</option>
+                </select>
+            </p>
+            <p><label class="form__labelText">Kwota, którą chcesz przeliczyć:</label>
+                <input class="form__input js-form__input" type="number" placeholder="Podaj kwotę" step="0.01">
+            </p>
+            <p class="form__errorText js-form__errorText">Musisz podać kwotę</p>
+            <p><label class="form__labelText">Waluta, na którą chcesz przeliczyć:</label>
+                <select class="form__currency js-form__currency--out">
+                    <option>PLN</option>
+                    <option selected>EUR</option>
+                    <option>GBP</option>
+                    <option>USD</option>
+                </select>
+            </p>
+            <button class="button button--count js-buttonCount">Przelicz</button>
+            <button class="button js-buttonClear">Wyczyść</button>
+        </form>
+    </div>
+    <p class="result js-result"></p>
+    <p class="info">Przeliczono po kursie z dnia 28.08.2023</p>
+
+</body>
+
+</html>
